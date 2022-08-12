@@ -1,3 +1,18 @@
 body {
-    background-color: salmon;
+    background-color: rgb(49, 29, 85);
+}
+.favourite-btn {
+    width: 30px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.card {
+    min-height: 400px;
 }

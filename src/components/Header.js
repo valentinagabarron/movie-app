@@ -1,9 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+//componentes
+import Buscador from './Buscador';
+
 function Header () {
     return (
-       <Header>
+     
   <nav className="navbar navbar-expand-lg bg-light">
   <div className="container-fluid">
    
@@ -12,7 +15,7 @@ function Header () {
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-      <ul>
+        <ul>
         <li className="nav-link active" aria-current="page">
             <Link to="/">Home</Link>
         </li>
@@ -26,8 +29,8 @@ function Header () {
       </div>
     </div>
   </div>
+  <Buscador />
 </nav>  
-       </Header>
     )
 }
  export default Header;

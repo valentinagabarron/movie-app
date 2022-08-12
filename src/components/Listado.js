@@ -11,6 +11,7 @@ function Listado () {
 
     useEffect (() => {
         const endPoint = "https://api.themoviedb.org/3/discover/movie?api_key=2375fe0981726488e00d09570e844cd8&language=es-ES&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_watch_monetization_types=flatrate"
+        //api
         axios.get(endPoint)
         .then(response => {
             const apiData = response.data;
@@ -38,7 +39,8 @@ function Listado () {
                 return (
         <div className='col-3' key={idx}>
             <div className="card my-4">
-              <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top" alt="..."/>
+              <img src={`https://image.tmdb.org/t/p/w500/${oneMovie.poster_path}`} className="card-img-top" alt="movie poster"/>
+                <button className='favourite-btn'></button>
                 <div className="card-body">
                  <h5 className="card-title">{ oneMovie.title.substring(0, 30) }</h5>
                  <p className="card-text">{ oneMovie.overview.substring(0, 100) }...</p>
